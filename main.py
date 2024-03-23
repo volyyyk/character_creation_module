@@ -6,48 +6,47 @@ from graphic_arts.start_game_banner import run_screensaver  # type: ignore
 
 def attack(char_name: str, char_class: str) -> str:
     if char_class == 'warrior':
-        return (f'{char_name: str} нанёс урон противнику '
+        return (f'{char_name} нанёс урон противнику '
                 f'равный {5 + randint(3, 5)}')
     if char_class == 'mage':
-        return (f'{char_name: str} нанёс урон противнику '
+        return (f'{char_name} нанёс урон противнику '
                 f'равный {5 + randint(5, 10)}')
     if char_class == 'healer':
-        return (f'{char_name: str} нанёс урон противнику '
+        return (f'{char_name} нанёс урон противнику '
                 f'равный {5 + randint(-3, -1)}')
     assert False
 
 
 def defence(char_name: str, char_class: str) -> str:
     if char_class == 'warrior':
-        return (f'{char_name: str} блокировал {10 + randint(5, 10)} урона')
+        return (f'{char_name} блокировал {10 + randint(5, 10)} урона')
     if char_class == 'mage':
-        return (f'{char_name: str} блокировал {10 + randint(-2, 2)} урона')
+        return (f'{char_name} блокировал {10 + randint(-2, 2)} урона')
     if char_class == 'healer':
-        return (f'{char_name: str} блокировал {10 + randint(2, 5)} урона')
+        return (f'{char_name} блокировал {10 + randint(2, 5)} урона')
     assert False
 
 
 def special(char_name: str, char_class: str) -> str:
     if char_class == 'warrior':
-        return (f'{char_name: str} применил специальное умение '
+        return (f'{char_name} применил специальное умение '
                 f'«Выносливость {80 + 25}»')
     if char_class == 'mage':
-        return (f'{char_name: str} применил специальное умение '
+        return (f'{char_name} применил специальное умение '
                 f'«Атака {5 + 40}»')
     if char_class == 'healer':
-        return (f'{char_name: str} применил специальное умение '
+        return (f'{char_name} применил специальное умение '
                 f'«Защита {10 + 30}»')
     assert False
 
 
 def start_training(char_name: str, char_class: str) -> str:
     if char_class == 'warrior':
-        print(f'{char_name: str}, ты Воитель — отличный боец ближнего боя.')
+        print(f'{char_name}, ты Воитель — отличный боец ближнего боя.')
     if char_class == 'mage':
-        print(f'{char_name: str}, ты Маг — превосходный укротитель стихий.')
+        print(f'{char_name}, ты Маг — превосходный укротитель стихий.')
     if char_class == 'healer':
-        print(f'{char_name: str}, ты Лекарь — чародей, способный исцелять '
-              f'раны.')
+        print(f'{char_name}, ты Лекарь — чародей, способный исцелять раны.')
     print('Потренируйся управлять своими навыками.')
     print('Введи одну из команд: attack — чтобы атаковать противника, '
           'defence — чтобы блокировать атаку противника или special — '
